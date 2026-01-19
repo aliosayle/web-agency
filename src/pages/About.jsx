@@ -1,10 +1,17 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
+import SEO from '../components/SEO';
 import './About.css';
 
 export default function About() {
   return (
     <main className="about-page">
+      <SEO 
+        title="About Us"
+        description="We're a small web design studio focused on building websites that convert. Direct access, fast decisions, full ownership. No account managers, no bureaucracy."
+        keywords="web design agency, small web studio, about basecamp studio"
+        canonical="/about"
+      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">
@@ -17,7 +24,7 @@ export default function About() {
       </section>
 
       {/* Story - No Fake Story */}
-      <section className="story section section-light">
+      <section className="story section section-alt">
         <div className="container">
           <div className="story-layout">
             <div className="story-content">
@@ -151,7 +158,7 @@ export default function About() {
       </section>
 
       {/* What We Believe */}
-      <section className="beliefs section section-light">
+      <section className="beliefs section section-alt">
         <div className="container">
           <SectionHeader
             label="Our approach"
@@ -236,7 +243,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="section section-dark">
+      <section className="final-cta section section-alt">
         <div className="container">
           <div className="cta-content text-center">
             <h2>Think we might be a fit?</h2>
@@ -244,7 +251,7 @@ export default function About() {
               Let's find out. Book a 30-minute call. We'll learn about your business and 
               tell you honestly whether we can help.
             </p>
-            <Button to="/contact" variant="white" size="lg">
+            <Button to="/contact" variant="primary" size="lg">
               Book a Call
             </Button>
           </div>

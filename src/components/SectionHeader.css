@@ -19,23 +19,13 @@
   margin-bottom: var(--space-4);
 }
 
-.section-header.light .section-label {
-  color: var(--color-accent-light);
-}
-
 .section-title {
   margin-bottom: var(--space-4);
-}
-
-.section-header.light .section-title {
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .section-description {
   font-size: var(--text-lg);
   line-height: 1.7;
-}
-
-.section-header.light .section-description {
-  color: var(--color-gray-400);
+  color: var(--color-text-secondary);
 }

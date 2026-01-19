@@ -17,7 +17,7 @@
   font-size: var(--text-lg);
   line-height: 1.8;
   margin-bottom: var(--space-4);
-  color: var(--color-gray-700);
+  color: var(--color-text-secondary);
 }
 
 .story-content p:last-child {
@@ -45,9 +45,10 @@
 
 .advantage-card {
   padding: var(--space-8);
-  background: var(--color-gray-50);
+  background: var(--color-bg-alt);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--color-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
 .advantage-icon {
@@ -56,10 +57,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-white);
+  background: var(--color-bg-elevated);
   border-radius: var(--radius-md);
   margin-bottom: var(--space-4);
   color: var(--color-accent);
+  transition: background-color var(--transition-base);
 }
 
 .advantage-card h3 {
@@ -83,9 +85,10 @@
 
 .belief-item {
   padding: var(--space-8);
-  background: var(--color-white);
+  background: var(--color-bg-elevated);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--color-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
 .belief-item h3 {
@@ -147,16 +150,9 @@
 .not-for-card {
   padding: var(--space-6);
   border-radius: var(--radius-lg);
-}
-
-.not-for-card.good {
-  background: var(--color-gray-50);
-  border: 1px solid var(--color-gray-200);
-}
-
-.not-for-card.bad {
-  background: var(--color-gray-100);
-  border: 1px solid var(--color-gray-200);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 }
 
 .not-for-card h4 {
@@ -171,7 +167,7 @@
 }
 
 .not-for-card.bad h4 {
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 }
 
 .not-for-card ul {
@@ -184,7 +180,7 @@
   font-size: var(--text-sm);
   padding-left: var(--space-6);
   position: relative;
-  color: var(--color-gray-700);
+  color: var(--color-text-secondary);
 }
 
 .not-for-card.good li::before {
@@ -199,22 +195,18 @@
   content: '✗';
   position: absolute;
   left: 0;
-  color: var(--color-gray-400);
+  color: var(--color-text-muted);
 }
 
-/* CTA */
-.cta-content {
-  max-width: 560px;
-  margin: 0 auto;
+/* Final CTA */
+.final-cta {
+  text-align: center;
 }
 
-.cta-content h2 {
-  color: var(--color-white);
-  margin-bottom: var(--space-4);
+.final-cta .cta-content h2 {
+  color: var(--color-text);
 }
 
-.cta-content p {
-  color: var(--color-gray-400);
-  font-size: var(--text-lg);
-  margin-bottom: var(--space-8);
+.final-cta .cta-content p {
+  color: var(--color-text-secondary);
 }

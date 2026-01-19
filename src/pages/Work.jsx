@@ -1,5 +1,6 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
+import SEO from '../components/SEO';
 import './Work.css';
 
 export default function Work() {
@@ -88,6 +89,12 @@ export default function Work() {
 
   return (
     <main className="work-page">
+      <SEO 
+        title="Our Work"
+        description="Concept projects showcasing our web design approach. See the strategy, decisions, and thinking behind each project. Full transparency on how we work."
+        keywords="web design portfolio, concept projects, web design case studies"
+        canonical="/work"
+      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">
@@ -157,7 +164,7 @@ export default function Work() {
       </section>
 
       {/* Why Concept Projects */}
-      <section className="why-concepts section section-light">
+      <section className="why-concepts section section-alt">
         <div className="container">
           <div className="concepts-layout">
             <div className="concepts-info">
@@ -201,7 +208,7 @@ export default function Work() {
       </section>
 
       {/* CTA */}
-      <section className="section section-dark">
+      <section className="final-cta section">
         <div className="container">
           <div className="cta-content text-center">
             <h2>Want to be our first client project?</h2>
@@ -209,7 +216,7 @@ export default function Work() {
               Our first clients get extra attention and our best pricing. 
               We're building our reputation—and we'll work hard to earn your referral.
             </p>
-            <Button to="/contact" variant="white" size="lg">
+            <Button to="/contact" variant="primary" size="lg">
               Let's Talk
             </Button>
           </div>

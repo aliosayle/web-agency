@@ -1,10 +1,17 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
+import SEO from '../components/SEO';
 import './Home.css';
 
 export default function Home() {
   return (
     <main className="home">
+      <SEO 
+        title="Web Design That Converts"
+        description="Professional web design for startups and small businesses. We build conversion-focused websites that turn visitors into customers. Starting from $300."
+        keywords="web design, small business website, startup website, affordable web design, conversion optimization"
+        canonical="/"
+      />
       {/* Hero Section */}
       <section className="hero section">
         <div className="container">
@@ -30,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Trust Section */}
-      <section className="trust section section-light">
+      <section className="trust section section-alt">
         <div className="container">
           <SectionHeader
             label="The elephant in the room"
@@ -83,25 +90,28 @@ export default function Home() {
         <div className="container">
           <SectionHeader
             label="What we do"
-            title="Services built for growth"
+            title="Packages (Starting From)"
             description="Three packages designed for different stages of your business. All focused on one thing: converting visitors into customers."
           />
           
           <div className="services-grid">
             <div className="service-card">
               <span className="service-tag">Starting out</span>
-              <h3>Starter Website</h3>
-              <p className="service-price">From $3,500</p>
+              <h3>Starter</h3>
+              <p className="service-price">$300 – $500</p>
               <p className="service-desc">
-                A focused one-page website for businesses that need to establish credibility 
+                A clean one-page website for businesses that need to establish credibility 
                 and start generating leads.
               </p>
               <ul className="service-features">
                 <li>Single page design</li>
                 <li>Mobile responsive</li>
                 <li>Contact form</li>
-                <li>2-week delivery</li>
+                <li>1-week delivery</li>
               </ul>
+              <div className="service-support">
+                <span className="support-label">Optional support from $25/mo</span>
+              </div>
               <Button to="/services#starter" variant="outline" fullWidth>
                 Learn More
               </Button>
@@ -109,39 +119,45 @@ export default function Home() {
             
             <div className="service-card featured">
               <span className="service-tag">Most popular</span>
-              <h3>Growth Website</h3>
-              <p className="service-price">From $7,500</p>
+              <h3>Business</h3>
+              <p className="service-price">$800 – $1,200</p>
               <p className="service-desc">
-                A multi-page website with conversion optimization for businesses 
+                A multi-page website with SEO and analytics for businesses 
                 ready to scale their online presence.
               </p>
               <ul className="service-features">
                 <li>Up to 5 pages</li>
                 <li>SEO foundation</li>
                 <li>Analytics setup</li>
-                <li>4-week delivery</li>
+                <li>2-week delivery</li>
               </ul>
-              <Button to="/services#growth" variant="primary" fullWidth>
+              <div className="service-support">
+                <span className="support-label">Optional support from $50/mo</span>
+              </div>
+              <Button to="/services#business" variant="primary" fullWidth>
                 Learn More
               </Button>
             </div>
             
             <div className="service-card">
               <span className="service-tag">Full custom</span>
-              <h3>Custom Build</h3>
-              <p className="service-price">From $15,000</p>
+              <h3>Premium</h3>
+              <p className="service-price">Custom</p>
               <p className="service-desc">
-                Custom web applications and complex sites for businesses with 
-                specific technical requirements.
+                Custom web applications, e-commerce, and complex sites built 
+                to your exact specifications.
               </p>
               <ul className="service-features">
                 <li>Custom functionality</li>
-                <li>CMS integration</li>
-                <li>Advanced features</li>
-                <li>6-8 week delivery</li>
+                <li>E-commerce ready</li>
+                <li>API integrations</li>
+                <li>Timeline varies</li>
               </ul>
-              <Button to="/services#custom" variant="outline" fullWidth>
-                Learn More
+              <div className="service-support">
+                <span className="support-label">Custom support plans available</span>
+              </div>
+              <Button to="/services#premium" variant="outline" fullWidth>
+                Contact Us
               </Button>
             </div>
           </div>
@@ -149,13 +165,12 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="process-overview section section-dark">
+      <section className="process-overview section section-alt">
         <div className="container">
           <SectionHeader
             label="How we work"
             title="A process you can predict"
             description="No surprises. No scope creep. Just a clear path from idea to launch."
-            light
           />
           
           <div className="process-steps">
@@ -201,7 +216,7 @@ export default function Home() {
           </div>
           
           <div className="process-cta">
-            <Button to="/process" variant="white" size="lg">
+            <Button to="/process" variant="primary" size="lg">
               See Full Process
             </Button>
           </div>

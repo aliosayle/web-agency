@@ -32,9 +32,9 @@ export default function Footer() {
           <div className="footer-nav">
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services#starter">Starter Website</Link></li>
-              <li><Link to="/services#growth">Growth Website</Link></li>
-              <li><Link to="/services#custom">Custom Build</Link></li>
+              <li><Link to="/services#starter">Starter</Link></li>
+              <li><Link to="/services#business">Business</Link></li>
+              <li><Link to="/services#premium">Premium</Link></li>
             </ul>
           </div>
           

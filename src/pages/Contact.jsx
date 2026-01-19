@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
+import SEO from '../components/SEO';
 import './Contact.css';
 
 export default function Contact() {
@@ -29,6 +30,12 @@ export default function Contact() {
   
   return (
     <main className="contact-page">
+      <SEO 
+        title="Contact Us"
+        description="Book a free 30-minute discovery call. No sales pitch, no obligation. Let's discuss your project and see if we're a good fit."
+        keywords="contact web designer, book consultation, web design inquiry"
+        canonical="/contact"
+      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">
@@ -226,7 +233,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section className="contact-faq section section-light">
+      <section className="contact-faq section section-alt">
         <div className="container">
           <SectionHeader
             label="Questions"

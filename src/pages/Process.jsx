@@ -1,5 +1,6 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
+import SEO from '../components/SEO';
 import './Process.css';
 
 export default function Process() {
@@ -100,12 +101,18 @@ export default function Process() {
         'Submit sitemap to search engines',
         'Provide documentation and training',
       ],
-      outcome: 'Your website is live and you own everything. We provide 30-90 days of support (depending on package) to fix any issues that come up.'
+      outcome: 'Your website is live and you own everything. We provide 14-30 days of launch support (depending on package) to fix any issues that come up.'
     },
   ];
 
   return (
     <main className="process-page">
+      <SEO 
+        title="Our Process"
+        description="A clear 7-step process from discovery to launch. Fixed pricing, predictable timelines, and no surprises. See exactly how we work."
+        keywords="web design process, website development timeline, how we work"
+        canonical="/process"
+      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">
@@ -121,7 +128,7 @@ export default function Process() {
               <span className="highlight-label">Clear steps</span>
             </div>
             <div className="highlight">
-              <span className="highlight-value">2–8</span>
+              <span className="highlight-value">1–2</span>
               <span className="highlight-label">Weeks to launch</span>
             </div>
             <div className="highlight">
@@ -170,7 +177,7 @@ export default function Process() {
       </section>
 
       {/* What to Expect */}
-      <section className="expectations section section-light">
+      <section className="expectations section section-alt">
         <div className="container">
           <SectionHeader
             label="Expectations"
@@ -237,11 +244,11 @@ export default function Process() {
                 <span>2 design revisions</span>
               </div>
               <div className="revision-tier">
-                <h4>Growth</h4>
+                <h4>Business</h4>
                 <span>3 design revisions</span>
               </div>
               <div className="revision-tier">
-                <h4>Custom</h4>
+                <h4>Premium</h4>
                 <span>Negotiated per project</span>
               </div>
               <p className="revision-note">
@@ -254,7 +261,7 @@ export default function Process() {
       </section>
 
       {/* CTA */}
-      <section className="section section-dark">
+      <section className="final-cta section section-alt">
         <div className="container">
           <div className="cta-content text-center">
             <h2>Ready to start?</h2>
@@ -262,7 +269,7 @@ export default function Process() {
               Book a discovery call. It's free, it's 30 minutes, and you'll know exactly 
               what working with us looks like.
             </p>
-            <Button to="/contact" variant="white" size="lg">
+            <Button to="/contact" variant="primary" size="lg">
               Book Your Discovery Call
             </Button>
           </div>
