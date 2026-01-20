@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Our Work | Basecamp Studio</title>
+    <meta name="title" content="Our Work | Basecamp Studio" />
+    <meta name="description" content="Concept projects showcasing our web design approach. See the strategy, decisions, and thinking behind each project. Full transparency on how we work." />
+    <meta name="keywords" content="web design portfolio, concept projects, web design case studies" />
+    <meta name="author" content="Basecamp Studio" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://basecamp.studio/work.html" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://basecamp.studio/work.html" />
+    <meta property="og:title" content="Our Work | Basecamp Studio" />
+    <meta property="og:description" content="Concept projects showcasing our web design approach. See the strategy, decisions, and thinking behind each project." />
+    <meta property="og:image" content="https://basecamp.studio/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://basecamp.studio/work.html" />
+    <meta name="twitter:title" content="Our Work | Basecamp Studio" />
+    <meta name="twitter:description" content="Concept projects showcasing our web design approach. See the strategy and decisions behind each project." />
+    <meta name="twitter:image" content="https://basecamp.studio/og-image.jpg" />
+    
+    <!-- Fonts - Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Prevent white flash on dark mode -->
+    <script>
+      (function() {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const bgColor = isDark ? '#0a0a0a' : '#ffffff';
+        const textColor = isDark ? '#fafafa' : '#171717';
+        document.documentElement.style.backgroundColor = bgColor;
+        document.documentElement.style.color = textColor;
+        // Also set on body for immediate effect
+        const style = document.createElement('style');
+        style.textContent = `body{background-color:${bgColor};color:${textColor};}`;
+        document.head.appendChild(style);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/pages/work-entry.jsx"></script>
+  </body>
+</html>

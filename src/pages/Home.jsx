@@ -1,17 +1,10 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
-import SEO from '../components/SEO';
 import './Home.css';
 
 export default function Home() {
   return (
     <main className="home">
-      <SEO 
-        title="Web Design That Converts"
-        description="Professional web design for startups and small businesses. We build conversion-focused websites that turn visitors into customers. Starting from $300."
-        keywords="web design, small business website, startup website, affordable web design, conversion optimization"
-        canonical="/"
-      />
       {/* Hero Section */}
       <section className="hero section">
         <div className="container">

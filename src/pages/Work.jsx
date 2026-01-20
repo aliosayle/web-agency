@@ -1,6 +1,5 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
-import SEO from '../components/SEO';
 import './Work.css';
 
 export default function Work() {
@@ -89,12 +88,6 @@ export default function Work() {
 
   return (
     <main className="work-page">
-      <SEO 
-        title="Our Work"
-        description="Concept projects showcasing our web design approach. See the strategy, decisions, and thinking behind each project. Full transparency on how we work."
-        keywords="web design portfolio, concept projects, web design case studies"
-        canonical="/work"
-      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">

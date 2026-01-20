@@ -49,6 +49,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
+    <!-- Prevent white flash on dark mode -->
+    <script>
+      (function() {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const bgColor = isDark ? '#0a0a0a' : '#ffffff';
+        const textColor = isDark ? '#fafafa' : '#171717';
+        document.documentElement.style.backgroundColor = bgColor;
+        document.documentElement.style.color = textColor;
+        // Also set on body for immediate effect
+        const style = document.createElement('style');
+        style.textContent = `body{background-color:${bgColor};color:${textColor};}`;
+        document.head.appendChild(style);
+      })();
+    </script>
+    
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {
@@ -129,6 +144,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/pages/home-entry.jsx"></script>
   </body>
 </html>

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Button.css';
 
 export default function Button({ 
@@ -14,17 +13,36 @@ export default function Button({
 }) {
   const className = `btn btn-${variant} btn-${size} ${fullWidth ? 'btn-full' : ''}`;
   
-  if (to) {
-    return (
-      <Link to={to} className={className} {...props}>
-        {children}
-      </Link>
-    );
-  }
+  // Convert 'to' prop to 'href' for internal navigation
+  const linkHref = to || href;
   
-  if (href) {
+  // Map React Router paths to HTML files
+  const getHref = (path) => {
+    if (!path) return null;
+    if (path.startsWith('http')) return path;
+    
+    // Handle hash links (e.g., /services#starter)
+    const [basePath, hash] = path.split('#');
+    
+    if (basePath === '/' || basePath === '') {
+      return hash ? `index.html#${hash}` : 'index.html';
+    }
+    
+    if (basePath.startsWith('/')) {
+      const htmlPath = basePath.slice(1) + '.html';
+      return hash ? `${htmlPath}#${hash}` : htmlPath;
+    }
+    
+    // If it already has .html, just return it with hash if present
+    if (path.includes('.html')) return path;
+    
+    return hash ? `${path}.html#${hash}` : `${path}.html`;
+  };
+  
+  if (linkHref) {
+    const finalHref = getHref(linkHref);
     return (
-      <a href={href} className={className} {...props}>
+      <a href={finalHref} className={className} {...props}>
         {children}
       </a>
     );

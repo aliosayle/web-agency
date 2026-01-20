@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer() {
@@ -9,10 +8,10 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link to="/" className="footer-logo">
+            <a href="index.html" className="footer-logo">
               <span className="logo-text">Basecamp</span>
               <span className="logo-dot">.</span>
-            </Link>
+            </a>
             <p className="footer-tagline">
               Web design that converts visitors into customers.
             </p>
@@ -21,27 +20,27 @@ export default function Footer() {
           <div className="footer-nav">
             <h4 className="footer-heading">Navigation</h4>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/process">Process</Link></li>
-              <li><Link to="/work">Work</Link></li>
-              <li><Link to="/about">About</Link></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="process.html">Process</a></li>
+              <li><a href="work.html">Work</a></li>
+              <li><a href="about.html">About</a></li>
             </ul>
           </div>
           
           <div className="footer-nav">
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services#starter">Starter</Link></li>
-              <li><Link to="/services#business">Business</Link></li>
-              <li><Link to="/services#premium">Premium</Link></li>
+              <li><a href="services.html#starter">Starter</a></li>
+              <li><a href="services.html#business">Business</a></li>
+              <li><a href="services.html#premium">Premium</a></li>
             </ul>
           </div>
           
           <div className="footer-nav">
             <h4 className="footer-heading">Contact</h4>
             <ul className="footer-links">
-              <li><Link to="/contact">Book a Call</Link></li>
+              <li><a href="contact.html">Book a Call</a></li>
               <li><a href="mailto:hello@basecamp.studio">hello@basecamp.studio</a></li>
             </ul>
           </div>

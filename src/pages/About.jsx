@@ -1,17 +1,10 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
-import SEO from '../components/SEO';
 import './About.css';
 
 export default function About() {
   return (
     <main className="about-page">
-      <SEO 
-        title="About Us"
-        description="We're a small web design studio focused on building websites that convert. Direct access, fast decisions, full ownership. No account managers, no bureaucracy."
-        keywords="web design agency, small web studio, about basecamp studio"
-        canonical="/about"
-      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">

@@ -1,17 +1,10 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
-import SEO from '../components/SEO';
 import './Services.css';
 
 export default function Services() {
   return (
     <main className="services-page">
-      <SEO 
-        title="Services & Pricing"
-        description="Web design packages starting from $300. Starter, Business, and Premium plans with clear pricing, fixed timelines, and optional monthly support."
-        keywords="web design pricing, website packages, affordable web design, small business website cost"
-        canonical="/services"
-      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">

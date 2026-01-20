@@ -1,6 +1,5 @@
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
-import SEO from '../components/SEO';
 import './Process.css';
 
 export default function Process() {
@@ -107,12 +106,6 @@ export default function Process() {
 
   return (
     <main className="process-page">
-      <SEO 
-        title="Our Process"
-        description="A clear 7-step process from discovery to launch. Fixed pricing, predictable timelines, and no surprises. See exactly how we work."
-        keywords="web design process, website development timeline, how we work"
-        canonical="/process"
-      />
       {/* Hero */}
       <section className="page-hero section">
         <div className="container">
