@@ -29,7 +29,7 @@ export default function About() {
               <p>
                 Here's the reality: We're designers and developers who got tired of working at 
                 agencies that overcharge, underdeliver, and treat clients like ticket numbers. 
-                We started Basecamp to do things differently.
+                We started SawaBuild Studio to do things differently.
               </p>
               <p>
                 We take on fewer projects so we can actually focus. We charge fair prices because 

@@ -35,8 +35,12 @@ export default function Navbar() {
     <header className="navbar">
       <nav className="navbar-container container">
         <a href="index.html" className="navbar-logo">
-          <span className="logo-text">Basecamp</span>
-          <span className="logo-dot">.</span>
+          <img 
+            src="/whiteSBArtboard%201@2x.png" 
+            alt="SawaBuild Studio" 
+            className="logo-image"
+          />
+          <span className="logo-text">SawaBuild Studio</span>
         </a>
         
         <button 

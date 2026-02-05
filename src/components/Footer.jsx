@@ -9,8 +9,12 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="index.html" className="footer-logo">
-              <span className="logo-text">Basecamp</span>
-              <span className="logo-dot">.</span>
+              <img 
+                src="/whiteSBArtboard%201@2x.png" 
+                alt="SawaBuild Studio" 
+                className="footer-logo-image"
+              />
+              <span className="footer-logo-text">SawaBuild Studio</span>
             </a>
             <p className="footer-tagline">
               Web design that converts visitors into customers.
@@ -41,13 +45,13 @@ export default function Footer() {
             <h4 className="footer-heading">Contact</h4>
             <ul className="footer-links">
               <li><a href="contact.html">Book a Call</a></li>
-              <li><a href="mailto:hello@basecamp.studio">hello@basecamp.studio</a></li>
+              <li><a href="mailto:support@sawabuildstudio.com">support@sawabuildstudio.com</a></li>
             </ul>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Basecamp Studio. All rights reserved.</p>
+          <p>&copy; {currentYear} SawaBuild Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

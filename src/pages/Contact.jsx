@@ -277,7 +277,7 @@ export default function Contact() {
             <div className="direct-info">
               <h3>Prefer email?</h3>
               <p>
-                Reach us directly at <a href="mailto:hello@basecamp.studio">hello@basecamp.studio</a>. 
+                Reach us directly at <a href="mailto:support@sawabuildstudio.com">support@sawabuildstudio.com</a>. 
                 We read every email personally.
               </p>
             </div>
