@@ -5,84 +5,87 @@ import './Work.css';
 export default function Work() {
   const projects = [
     {
-      id: 'fintech-landing',
-      tag: 'Concept Project',
-      title: 'Fintech Startup Landing Page',
-      businessType: 'B2B SaaS — Payment Processing',
-      problem: 'A fictional payment processing startup needs a landing page that explains complex technology in simple terms and converts visitors into demo requests. The challenge: making financial infrastructure feel accessible without dumbing it down.',
+      id: 'science-contact-hub',
+      tag: 'Client Work',
+      title: 'Science Contact Hub',
+      businessType: 'Research Collaboration Platform',
+      problem: 'A research-focused organization needed a clear, professional platform to connect researchers and facilitate collaboration across the scientific community. The site had to serve as a central hub for science contact and discovery.',
       decisions: [
-        'Used progressive disclosure to layer technical details. The hero speaks to outcomes ("Accept payments in 5 minutes"), with technical specs available for those who scroll.',
-        'Created a clear visual hierarchy that guides eyes toward CTAs. Removed navigation clutter by using a minimal header.',
-        'Built trust through specificity: real numbers, real integrations, real API documentation preview.',
-        'Mobile-first approach ensures the key message lands before any scrolling is needed.'
+        'Designed a clean, focused presence that puts research collaboration and contact at the center.',
+        'Structured content and navigation to support researchers finding and connecting with the right contacts.',
+        'Built for clarity and credibility in an academic and scientific context.'
       ],
-      techStack: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
-      outcome: 'A landing page designed to achieve 4-6% demo request conversion rate based on industry benchmarks. Clear value proposition visible within 3 seconds. Technical credibility established through live code examples.',
-      color: '#2563eb'
+      techStack: ['Custom build'],
+      outcome: 'A live research collaboration platform that acts as the central hub for science contact and community connection.',
+      color: '#0ea5e9',
+      url: 'https://www.sciencecontacthub.com/'
     },
     {
-      id: 'law-firm',
-      tag: 'Concept Project',
-      title: 'Personal Injury Law Firm',
-      businessType: 'Legal Services — Personal Injury',
-      problem: 'A solo personal injury attorney needs a website that generates qualified leads. Most law firm websites look identical and fail to differentiate. The challenge: standing out in a crowded, skeptical market.',
+      id: 'celticverbs-ai',
+      tag: 'Client Work',
+      title: 'CelticVerbs AI',
+      businessType: 'Industrial AI Integration & Engineering',
+      problem: 'CelticVerbs AI needed a website that communicates their complex offering—LLM and automation integration inside enterprise systems—to both technical and executive audiences. The challenge: establishing credibility through methodology, live metrics, and responsible AI governance without overwhelming visitors.',
       decisions: [
-        'Focused on client outcomes, not credentials. Led with case results and recovery amounts rather than degrees and awards.',
-        'Removed legal jargon entirely. Every sentence written at an 8th-grade reading level.',
-        'Prominent phone number and contact form on every section—not just the contact page.',
-        'Added FAQ section optimized for the exact questions potential clients search for.'
+        'Structured the site around core delivery: integration engineering, automation design, production operations, and measured outcomes.',
+        'Surfaced industry-specific proof points with real numbers: integration nodes, enterprise partners, reliability records, and workflow metrics.',
+        'Clear four-phase methodology (Discovery, Design, Build, Operate) so prospects see how engagements run.',
+        'Platform-agnostic tech stack visibility (cloud, APIs, data, security, industrial systems) for technical buyers.',
+        'Live operational log and capacity status to reinforce production-grade positioning.',
+        'Dedicated Responsible AI section covering scope, human oversight, and auditability for regulated industries.'
       ],
-      techStack: ['HTML', 'CSS', 'JavaScript', 'Netlify Forms'],
-      outcome: 'A website designed to rank for local search terms and convert anxious visitors into consultations. Estimated 8-12 form submissions per 1,000 visitors based on comparable law firm sites.',
-      color: '#059669'
+      techStack: ['Modern front-end', 'Content strategy', 'Conversion-focused UX'],
+      outcome: 'A production-grade marketing site that positions CelticVerbs AI for industrial and regulated sectors, with clear pathways for integration discovery and engineering contact.',
+      color: '#1e3a5f',
+      url: 'https://celticverbs.com/'
     },
     {
-      id: 'saas-dashboard',
-      tag: 'Concept Project',
-      title: 'Analytics SaaS Marketing Site',
-      businessType: 'B2B SaaS — Marketing Analytics',
-      problem: 'A marketing analytics platform needs to explain a complex product to non-technical marketers. Competitors overwhelm with features. The challenge: communicate value without feature dumping.',
+      id: 'ironway-subinfra',
+      tag: 'Client Work',
+      title: 'Ironway Subinfra',
+      businessType: 'Digital Systems Integration & Engineering',
+      problem: 'A digital systems integration and engineering company needed a professional web presence to communicate their capabilities and attract B2B clients. The site had to convey technical credibility and support lead generation.',
       decisions: [
-        'Structured around jobs-to-be-done, not features. "See which campaigns drive revenue" beats "Multi-touch attribution modeling."',
-        'Interactive product tour replaces static screenshots. Visitors click through key workflows without signing up.',
-        'Social proof from recognizable brands placed strategically throughout—not just a logo bar.',
-        'Pricing page with honest comparison to alternatives. Addresses objections before they arise.'
+        'Focused on clarity and professionalism for engineering and operations audiences.',
+        'Structured content around digital systems integration and engineering services.',
+        'Designed to support discovery and contact for potential partners and clients.'
       ],
-      techStack: ['Next.js', 'TypeScript', 'Sanity CMS', 'Vercel'],
-      outcome: 'A marketing site designed for 15%+ pricing page view rate and 3%+ trial conversion. Clear differentiation from competitors through transparency and UX.',
-      color: '#7c3aed'
+      techStack: ['Custom build'],
+      outcome: 'A clear, professional site that represents Ironway Subinfra’s brand and supports business development in digital systems integration.',
+      color: '#475569',
+      url: 'https://www.ironwaysubinfra.com/'
     },
     {
-      id: 'coaching-business',
-      tag: 'Concept Project',
-      title: 'Executive Coach Personal Brand',
-      businessType: 'Professional Services — Executive Coaching',
-      problem: 'An executive coach transitioning from referrals to inbound leads needs a site that establishes authority and books discovery calls. No team, just one person. The challenge: building trust when you are the product.',
+      id: 'gym-pos',
+      tag: 'Client Work',
+      title: 'Gym Membership & POS System',
+      businessType: 'Fitness — Membership & Point of Sale',
+      problem: 'A gym needed a full-featured system to manage memberships, check-ins, payments, and point-of-sale operations under one roof. The challenge was delivering a single platform that handles sign-ups, renewals, access control, and in-house retail and services.',
       decisions: [
-        'Focused on specific outcomes with specific clients, not vague transformational claims.',
-        'Removed stock photos entirely. Used typography and whitespace to convey premium positioning.',
-        'Long-form content on the homepage—executives read more than they admit, especially when making high-ticket decisions.',
-        'Calendly embedded directly on site. Removed friction from booking. One click to schedule.'
+        'Built an integrated gym management platform with membership lifecycle (sign-up, renewals, upgrades, freezes, cancellations).',
+        'Designed and implemented a complete POS for retail, supplements, merchandise, and service add-ons at the front desk.',
+        'Unified reporting and dashboards for revenue, attendance, and inventory across membership and POS.',
+        'Role-based access for staff, managers, and owners with audit trails for compliance.'
       ],
-      techStack: ['Webflow', 'Calendly Integration', 'Custom CSS'],
-      outcome: 'A personal brand site designed to convert 2-4% of visitors into discovery calls. Premium positioning supports $15K+ engagement pricing.',
-      color: '#dc2626'
+      techStack: ['Full-stack application', 'Payments integration', 'Membership & POS modules'],
+      outcome: 'A single system that runs the gym’s membership and front-desk operations end to end, with all features, reporting, and controls in one place.',
+      color: '#16a34a'
     },
     {
-      id: 'ecommerce-brand',
-      tag: 'Concept Project',
-      title: 'DTC Skincare Brand',
-      businessType: 'E-commerce — Beauty & Skincare',
-      problem: 'A direct-to-consumer skincare brand needs a Shopify store that educates and converts. Ingredient-focused positioning in a crowded market. The challenge: making science accessible without losing credibility.',
+      id: 'orca',
+      tag: 'Client Work',
+      title: 'ORCA — Importation & Supply Chain Management',
+      businessType: 'Enterprise — Import & Supply Chain',
+      problem: 'A large company needed a dedicated system to manage importation, logistics, and supply chain operations. The challenge was handling orders, customs, inventory, and supplier coordination at scale with full visibility and control.',
       decisions: [
-        'Product pages lead with the problem, not the product. "For dry, sensitive skin" before "Hyaluronic Acid Serum."',
-        'Ingredient education built into the shopping experience. Click any ingredient for research-backed explanations.',
-        'Before/after photos with realistic expectations and timeframes. No miraculous overnight claims.',
-        'Subscription model presented as default with clear savings—but easy to choose one-time purchase.'
+        'Designed ORCA as a central platform for import workflows: purchase orders, shipping, customs documentation, and landed cost tracking.',
+        'Built supply chain management features for supplier management, lead times, reorder points, and multi-location inventory.',
+        'Integrated reporting and analytics for spend, lead times, stock levels, and compliance across the import pipeline.',
+        'Scaled architecture and access controls for enterprise use across teams and regions.'
       ],
-      techStack: ['Shopify', 'Liquid', 'Custom Theme', 'Klaviyo'],
-      outcome: 'An e-commerce experience designed for 2.5%+ conversion rate with 30%+ subscription adoption. Higher AOV through education and bundling.',
-      color: '#ec4899'
+      techStack: ['Enterprise platform', 'Supply chain logic', 'Import & customs workflows', 'Reporting & analytics'],
+      outcome: 'ORCA delivers end-to-end importation and supply chain management for the organization, with full visibility, controls, and reporting at scale.',
+      color: '#0369a1'
     }
   ];
 
@@ -93,15 +96,13 @@ export default function Work() {
         <div className="container">
           <SectionHeader
             label="Our Work"
-            title="Concept projects that show how we think"
-            description="We're new, so we don't have client work to show. Instead, we've created detailed concept projects that demonstrate our strategy, decision-making, and execution."
+            title="Projects we've built"
+            description="Websites and software we've designed and built for clients—from marketing sites to membership systems and enterprise supply chain platforms."
           />
           
           <div className="work-disclaimer">
             <p>
-              <strong>Full transparency:</strong> These are not real client projects. 
-              They're concept pieces we've designed to show our approach. Each one includes 
-              the thinking behind every decision—something you rarely see in a traditional portfolio.
+              Where we can share them, projects include a link to the <strong>live site</strong>. Some work is confidential or internal and is listed without a public link.
             </p>
           </div>
         </div>
@@ -113,7 +114,14 @@ export default function Work() {
           {projects.map((project) => (
             <article key={project.id} className="project-card" id={project.id}>
               <div className="project-header">
-                <span className="project-tag">{project.tag}</span>
+                <div className="project-header-top">
+                  <span className="project-tag">{project.tag}</span>
+                  {project.url && (
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">
+                      View live site →
+                    </a>
+                  )}
+                </div>
                 <h2>{project.title}</h2>
                 <p className="project-type">{project.businessType}</p>
               </div>
@@ -145,7 +153,7 @@ export default function Work() {
                 </div>
                 
                 <div className="project-section outcome">
-                  <h4>Projected Outcome</h4>
+                  <h4>Outcome</h4>
                   <p>{project.outcome}</p>
                 </div>
               </div>
@@ -156,58 +164,14 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Why Concept Projects */}
-      <section className="why-concepts section section-alt">
-        <div className="container">
-          <div className="concepts-layout">
-            <div className="concepts-info">
-              <span className="section-label">Why concept projects?</span>
-              <h2>Real work shows what. Concepts show why.</h2>
-              <p>
-                Most portfolios are just pretty pictures. They don't show the strategy, 
-                the constraints, or the reasoning behind decisions. You can't tell if the 
-                designer got lucky or actually knows what they're doing.
-              </p>
-              <p>
-                Our concept projects are fully documented case studies. You'll see how we 
-                analyze problems, make decisions, and think about conversion. That tells you 
-                more about what we'll do for you than a carousel of screenshots ever could.
-              </p>
-            </div>
-            
-            <div className="concepts-comparison">
-              <div className="comparison-card">
-                <h4>Traditional portfolio</h4>
-                <ul className="comparison-list con">
-                  <li>Screenshots without context</li>
-                  <li>No explanation of strategy</li>
-                  <li>Can't see problem-solving process</li>
-                  <li>Looks good, but did it work?</li>
-                </ul>
-              </div>
-              
-              <div className="comparison-card">
-                <h4>Our concept projects</h4>
-                <ul className="comparison-list pro">
-                  <li>Full strategic breakdown</li>
-                  <li>Every decision explained</li>
-                  <li>Clear problem → solution flow</li>
-                  <li>Projected outcomes based on data</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="final-cta section">
         <div className="container">
           <div className="cta-content text-center">
-            <h2>Want to be our first client project?</h2>
+            <h2>Have a project in mind?</h2>
             <p>
-              Our first clients get extra attention and our best pricing. 
-              We're building our reputation—and we'll work hard to earn your referral.
+              From marketing sites to membership systems and enterprise software, 
+              we design and build solutions that fit your business.
             </p>
             <Button to="/contact" variant="primary" size="lg">
               Let's Talk
