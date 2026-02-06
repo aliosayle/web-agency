@@ -1,4 +1,5 @@
 import Button from '../components/Button';
+import HeroVisual from '../components/HeroVisual';
 import SectionHeader from '../components/SectionHeader';
 import './Home.css';
 
@@ -7,7 +8,7 @@ export default function Home() {
     <main className="home">
       {/* Hero Section */}
       <section className="hero section">
-        <div className="container">
+        <div className="container hero-container">
           <div className="hero-content">
             <h1 className="hero-title">
               Websites that turn visitors into paying customers
@@ -26,6 +27,7 @@ export default function Home() {
             </div>
             <p className="hero-note">Free 30-minute consultation. No strings attached.</p>
           </div>
+          <HeroVisual />
         </div>
       </section>
 
