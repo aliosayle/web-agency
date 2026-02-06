@@ -11,7 +11,7 @@ export default function Services() {
           <SectionHeader
             label="Services"
             title="Clear packages. Fair prices. No surprises."
-            description="Choose the package that fits your stage. Every option includes design, development, and launch support."
+            description="Web design packages for businesses in Lebanon and beyond. Choose the package that fits your stage. Every option includes design, development, and launch support."
           />
         </div>
       </section>

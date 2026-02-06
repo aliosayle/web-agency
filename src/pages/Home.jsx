@@ -13,7 +13,7 @@ export default function Home() {
               Websites that turn visitors into paying customers
             </h1>
             <p className="hero-subtitle">
-              We design and build conversion-focused websites for startups and small businesses. 
+              We design and build conversion-focused websites for businesses in <strong>Lebanon</strong> and beyond. 
               No fluff. No delays. Just results.
             </p>
             <div className="hero-ctas">
