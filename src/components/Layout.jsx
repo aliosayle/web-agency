@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -9,6 +10,7 @@ export default function Layout({ children }) {
       <Navbar />
       {children}
       <Footer />
+      <Analytics />
       <SpeedInsights />
     </div>
   );
