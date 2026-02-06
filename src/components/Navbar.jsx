@@ -11,30 +11,23 @@ export default function Navbar() {
   }, []);
   
   const navLinks = [
-    { path: '/', label: 'Home', href: 'index.html' },
-    { path: '/services', label: 'Services', href: 'services.html' },
-    { path: '/process', label: 'Process', href: 'process.html' },
-    { path: '/work', label: 'Work', href: 'work.html' },
-    { path: '/about', label: 'About', href: 'about.html' },
+    { path: '/', label: 'Home', href: '/' },
+    { path: '/services', label: 'Services', href: '/services' },
+    { path: '/process', label: 'Process', href: '/process' },
+    { path: '/work', label: 'Work', href: '/work' },
+    { path: '/about', label: 'About', href: '/about' },
   ];
   
   const isActive = (path) => {
     const current = window.location.pathname;
-    const currentFile = current.split('/').pop() || 'index.html';
-    
-    if (path === '/') {
-      return currentFile === 'index.html' || current === '/' || current.endsWith('/');
-    }
-    
-    // Check if current file matches the expected HTML file
-    const expectedFile = path.slice(1) + '.html';
-    return currentFile === expectedFile || current.includes(path);
+    if (path === '/') return current === '/' || current === '' || current.endsWith('/');
+    return current === path || current.startsWith(path + '/');
   };
   
   return (
     <header className="navbar">
       <nav className="navbar-container container">
-        <a href="index.html" className="navbar-logo">
+        <a href="/" className="navbar-logo">
           <img 
             src="/whiteSBArtboard%201@2x.png" 
             alt="SawaBuild Studio" 
@@ -70,7 +63,7 @@ export default function Navbar() {
           </ul>
           
           <div className="navbar-cta">
-            <Button href="contact.html" variant="primary" size="sm">
+            <Button to="/contact" variant="primary" size="sm">
               Book a Call
             </Button>
           </div>

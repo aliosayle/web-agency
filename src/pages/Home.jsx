@@ -230,6 +230,10 @@ export default function Home() {
             <Button to="/contact" variant="primary" size="lg">
               Book Your Free Call
             </Button>
+            <p className="final-cta-links">
+              Explore our <a href="/services">web design packages</a>,{' '}
+              <a href="/process">how we work</a>, and our <a href="/work">portfolio</a>.
+            </p>
           </div>
         </div>
       </section>

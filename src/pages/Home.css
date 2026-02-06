@@ -267,3 +267,19 @@
   margin-bottom: var(--space-8);
   color: var(--color-text-secondary);
 }
+
+.final-cta-links {
+  font-size: var(--text-sm);
+  margin-top: var(--space-6);
+  margin-bottom: 0 !important;
+}
+
+.final-cta-links a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.final-cta-links a:hover {
+  text-decoration: underline;
+}

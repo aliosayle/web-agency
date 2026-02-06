@@ -16,27 +16,13 @@ export default function Button({
   // Convert 'to' prop to 'href' for internal navigation
   const linkHref = to || href;
   
-  // Map React Router paths to HTML files
+  // Clean URLs (no .html) — Vercel cleanUrls serves the right page
   const getHref = (path) => {
     if (!path) return null;
     if (path.startsWith('http')) return path;
-    
-    // Handle hash links (e.g., /services#starter)
     const [basePath, hash] = path.split('#');
-    
-    if (basePath === '/' || basePath === '') {
-      return hash ? `index.html#${hash}` : 'index.html';
-    }
-    
-    if (basePath.startsWith('/')) {
-      const htmlPath = basePath.slice(1) + '.html';
-      return hash ? `${htmlPath}#${hash}` : htmlPath;
-    }
-    
-    // If it already has .html, just return it with hash if present
-    if (path.includes('.html')) return path;
-    
-    return hash ? `${path}.html#${hash}` : `${path}.html`;
+    const clean = basePath === '/' || basePath === '' ? '/' : basePath.startsWith('/') ? basePath : `/${basePath}`;
+    return hash ? `${clean}#${hash}` : clean;
   };
   
   if (linkHref) {

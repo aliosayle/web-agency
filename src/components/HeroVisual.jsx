@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './HeroVisual.css';
 
@@ -52,23 +53,33 @@ const cardFloatTransition = (stagger = 0) => ({
 });
 
 export default function HeroVisual() {
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduceMotion(mq.matches);
+    const handler = () => setReduceMotion(mq.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
   return (
     <div className="hero-visual" aria-hidden="true">
       {/* Animated gradient orbs */}
       <motion.div
         className="hero-orb hero-orb-1"
         variants={orbVariants}
-        animate="one"
+        animate={reduceMotion ? false : 'one'}
       />
       <motion.div
         className="hero-orb hero-orb-2"
         variants={orbVariants}
-        animate="two"
+        animate={reduceMotion ? false : 'two'}
       />
       <motion.div
         className="hero-orb hero-orb-3"
         variants={orbVariants}
-        animate="three"
+        animate={reduceMotion ? false : 'three'}
       />
 
       {/* Subtle grid behind bento */}
@@ -83,8 +94,8 @@ export default function HeroVisual() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           variants={cardStagger}
-          animate={{ y: cardFloatY }}
-          transition={cardFloatTransition(0)}
+          animate={reduceMotion ? {} : { y: cardFloatY }}
+          transition={reduceMotion ? {} : cardFloatTransition(0)}
         >
           <div className="hero-card-chrome">
             <span /><span /><span />
@@ -105,8 +116,8 @@ export default function HeroVisual() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           variants={cardStagger}
-          animate={{ y: cardFloatY }}
-          transition={cardFloatTransition(0.4)}
+          animate={reduceMotion ? {} : { y: cardFloatY }}
+          transition={reduceMotion ? {} : cardFloatTransition(0.4)}
         >
           <div className="hero-card-dots">
             <span /><span /><span /><span /><span />
@@ -120,8 +131,8 @@ export default function HeroVisual() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           variants={cardStagger}
-          animate={{ y: cardFloatY }}
-          transition={cardFloatTransition(0.8)}
+          animate={reduceMotion ? {} : { y: cardFloatY }}
+          transition={reduceMotion ? {} : cardFloatTransition(0.8)}
         >
           <div className="hero-card-progress" />
         </motion.div>

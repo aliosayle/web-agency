@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a href="index.html" className="footer-logo">
+            <a href="/" className="footer-logo">
               <img 
                 src="/whiteSBArtboard%201@2x.png" 
                 alt="SawaBuild Studio" 
@@ -24,27 +24,27 @@ export default function Footer() {
           <div className="footer-nav">
             <h4 className="footer-heading">Navigation</h4>
             <ul className="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="process.html">Process</a></li>
-              <li><a href="work.html">Work</a></li>
-              <li><a href="about.html">About</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/process">Process</a></li>
+              <li><a href="/work">Work</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
           
           <div className="footer-nav">
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-links">
-              <li><a href="services.html#starter">Starter</a></li>
-              <li><a href="services.html#business">Business</a></li>
-              <li><a href="services.html#premium">Premium</a></li>
+              <li><a href="/services#starter">Starter</a></li>
+              <li><a href="/services#business">Business</a></li>
+              <li><a href="/services#premium">Premium</a></li>
             </ul>
           </div>
           
           <div className="footer-nav">
             <h4 className="footer-heading">Contact</h4>
             <ul className="footer-links">
-              <li><a href="contact.html">Book a Call</a></li>
+              <li><a href="/contact">Book a Call</a></li>
               <li><a href="mailto:support@sawabuildstudio.com">support@sawabuildstudio.com</a></li>
             </ul>
           </div>

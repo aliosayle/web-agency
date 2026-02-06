@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>Build a Website in Lebanon | SawaBuild Studio — Web Design Lebanon</title>
-    <meta name="title" content="Build a Website in Lebanon | SawaBuild Studio — Web Design Lebanon" />
-    <meta name="description" content="Build your website in Lebanon. SawaBuild Studio offers professional web design and development in Lebanon for businesses and startups. Conversion-focused sites from $300. Web design Lebanon." />
+    <title>Web Design Lebanon | Build Your Website | SawaBuild Studio</title>
+    <meta name="title" content="Web Design Lebanon | Build Your Website | SawaBuild Studio" />
+    <meta name="description" content="Professional web design in Lebanon. We build conversion-focused websites for businesses and startups from $300. Clear pricing, fixed timelines. Book a free call." />
     <meta name="keywords" content="web design Lebanon, build website Lebanon, website development Lebanon, web design Beirut, create website Lebanon, professional website Lebanon, business website Lebanon, affordable web design Lebanon, web development Lebanon" />
     <meta name="author" content="SawaBuild Studio" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
+    <meta http-equiv="content-language" content="en" />
     <meta name="revisit-after" content="7 days" />
+    
+    <!-- SEO: hide fallback H1 from view (crawlers still read it) -->
+    <style>.seo-fallback-h1{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}</style>
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://sawabuild.studio/" />
@@ -29,8 +33,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sawabuild.studio/" />
-    <meta property="og:title" content="Build a Website in Lebanon | SawaBuild Studio — Web Design Lebanon" />
-    <meta property="og:description" content="Build your website in Lebanon. Professional web design and development in Lebanon for businesses and startups. Conversion-focused sites from $300." />
+    <meta property="og:title" content="Web Design Lebanon | Build Your Website | SawaBuild Studio" />
+    <meta property="og:description" content="Professional web design in Lebanon. Conversion-focused websites for businesses from $300. Clear pricing, fixed timelines." />
     <meta property="og:image" content="https://sawabuild.studio/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -40,8 +44,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://sawabuild.studio/" />
-    <meta name="twitter:title" content="Build a Website in Lebanon | SawaBuild Studio — Web Design Lebanon" />
-    <meta name="twitter:description" content="Build your website in Lebanon. Professional web design and development in Lebanon for businesses and startups. From $300." />
+    <meta name="twitter:title" content="Web Design Lebanon | Build Your Website | SawaBuild Studio" />
+    <meta name="twitter:description" content="Professional web design in Lebanon. Conversion-focused websites from $300. Clear pricing, fixed timelines." />
     <meta name="twitter:image" content="https://sawabuild.studio/og-image.jpg" />
     
     <!-- Fonts - Preconnect for Performance -->
@@ -143,7 +147,10 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO: static H1 for crawlers before React loads (replaced on mount) -->
+      <h1 class="seo-fallback-h1">Web Design Lebanon — Websites that turn visitors into paying customers | SawaBuild Studio</h1>
+    </div>
     <script type="module" src="/src/pages/home-entry.jsx"></script>
   </body>
 </html>
