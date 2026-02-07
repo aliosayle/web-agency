@@ -56,6 +56,22 @@ export default function Work() {
       url: 'https://www.ironwaysubinfra.com/'
     },
     {
+      id: 'saned',
+      tag: 'Client Work',
+      title: 'Saned',
+      businessType: 'Web presence',
+      problem: 'Saned needed a clear, professional website to represent their organization online and reach their audience effectively.',
+      decisions: [
+        'Designed a focused, accessible site aligned with their goals and brand.',
+        'Structured content and navigation for clear communication and discovery.',
+        'Built and deployed for reliability and performance on Netlify.'
+      ],
+      techStack: ['Custom build', 'Netlify'],
+      outcome: 'A live website that serves as Saned’s central presence online.',
+      color: '#0d9488',
+      url: 'https://sanedorg.netlify.app/'
+    },
+    {
       id: 'gym-pos',
       tag: 'Client Work',
       title: 'Gym Membership & POS System',

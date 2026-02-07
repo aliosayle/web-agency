@@ -1,14 +1,14 @@
 /* Design System & Global Styles */
 :root {
-  /* Light Mode Colors (Default) */
-  --color-bg: #ffffff;
-  --color-bg-alt: #fafafa;
-  --color-bg-elevated: #ffffff;
+  /* Light Mode Colors (Default) - softened to reduce glare */
+  --color-bg: #f6f6f6;
+  --color-bg-alt: #efefef;
+  --color-bg-elevated: #fafafa;
   --color-text: #171717;
   --color-text-secondary: #525252;
   --color-text-muted: #737373;
-  --color-border: #e5e5e5;
-  --color-border-light: #f5f5f5;
+  --color-border: #e0e0e0;
+  --color-border-light: #ebebeb;
   
   /* Static Colors */
   --color-black: #0a0a0a;
