@@ -1,11 +1,11 @@
 # Robots.txt for SawaBuild Studio
-# https://sawabuild.studio
+# https://sawabuildstudio.com
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://sawabuild.studio/sitemap.xml
+Sitemap: https://sawabuildstudio.com/sitemap.xml
 
 # Disallow admin or private paths (if any)
 Disallow: /api/

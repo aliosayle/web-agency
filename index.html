@@ -19,7 +19,7 @@
     <style>.seo-fallback-h1{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;}</style>
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://sawabuild.studio/" />
+    <link rel="canonical" href="https://sawabuildstudio.com/" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -32,21 +32,33 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sawabuild.studio/" />
+    <meta property="og:url" content="https://sawabuildstudio.com/" />
     <meta property="og:title" content="Web Design Lebanon | Build Your Website | SawaBuild Studio" />
     <meta property="og:description" content="Professional web design in Lebanon. Conversion-focused websites for businesses from $300. Clear pricing, fixed timelines." />
-    <meta property="og:image" content="https://sawabuild.studio/og-image.jpg" />
+    <meta property="og:image" content="https://sawabuildstudio.com/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="SawaBuild Studio" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_LB" />
+    
+    <!-- Geo-targeting for Lebanon -->
+    <meta name="geo.region" content="LB" />
+    <meta name="geo.placename" content="Lebanon" />
+    <meta name="geo.position" content="33.8547;35.8623" />
+    <meta name="ICBM" content="33.8547, 35.8623" />
+    
+    <!-- Language alternates for Lebanon -->
+    <link rel="alternate" hreflang="en-LB" href="https://sawabuildstudio.com/" />
+    <link rel="alternate" hreflang="ar-LB" href="https://sawabuildstudio.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://sawabuildstudio.com/" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://sawabuild.studio/" />
+    <meta name="twitter:url" content="https://sawabuildstudio.com/" />
     <meta name="twitter:title" content="Web Design Lebanon | Build Your Website | SawaBuild Studio" />
     <meta name="twitter:description" content="Professional web design in Lebanon. Conversion-focused websites from $300. Clear pricing, fixed timelines." />
-    <meta name="twitter:image" content="https://sawabuild.studio/og-image.jpg" />
+    <meta name="twitter:image" content="https://sawabuildstudio.com/og-image.jpg" />
     
     <!-- Fonts - Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,8 +86,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "SawaBuild Studio",
-      "url": "https://sawabuild.studio",
-      "logo": "https://sawabuild.studio/favicon.ico",
+      "url": "https://sawabuildstudio.com",
+      "logo": "https://sawabuildstudio.com/favicon.ico",
       "description": "Web design agency in Lebanon. We build conversion-focused websites for businesses and startups in Lebanon and internationally.",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -87,6 +99,22 @@
     }
     </script>
     
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sawabuildstudio.com/"
+        }
+      ]
+    }
+    </script>
+    
     <!-- Structured Data - Local Business -->
     <script type="application/ld+json">
     {
@@ -94,14 +122,21 @@
       "@type": "ProfessionalService",
       "name": "SawaBuild Studio",
       "description": "Web design and development in Lebanon. We build conversion-focused websites for businesses and startups in Lebanon.",
-      "url": "https://sawabuild.studio",
+      "url": "https://sawabuildstudio.com",
       "priceRange": "$300 - $1200+",
-      "image": "https://sawabuild.studio/og-image.jpg",
+      "image": "https://sawabuildstudio.com/og-image.jpg",
       "telephone": "",
       "email": "support@sawabuildstudio.com",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "LB"
+        "addressCountry": "LB",
+        "addressRegion": "Lebanon",
+        "addressLocality": "Beirut"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "33.8547",
+        "longitude": "35.8623"
       },
       "areaServed": [
         { "@type": "Country", "name": "Lebanon" },

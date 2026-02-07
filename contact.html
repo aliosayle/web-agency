@@ -14,7 +14,7 @@
     <meta http-equiv="content-language" content="en" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://sawabuild.studio/contact" />
+    <link rel="canonical" href="https://sawabuildstudio.com/contact" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -26,17 +26,28 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sawabuild.studio/contact" />
+    <meta property="og:url" content="https://sawabuildstudio.com/contact" />
     <meta property="og:title" content="Contact — Build Your Website Lebanon | SawaBuild Studio" />
     <meta property="og:description" content="Contact us to build your website in Lebanon. Free 30-minute discovery call. No obligation." />
-    <meta property="og:image" content="https://sawabuild.studio/og-image.jpg" />
+    <meta property="og:image" content="https://sawabuildstudio.com/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_LB" />
+    
+    <!-- Geo-targeting for Lebanon -->
+    <meta name="geo.region" content="LB" />
+    <meta name="geo.placename" content="Lebanon" />
+    
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="en-LB" href="https://sawabuildstudio.com/contact" />
+    <link rel="alternate" hreflang="ar-LB" href="https://sawabuildstudio.com/contact" />
+    <link rel="alternate" hreflang="x-default" href="https://sawabuildstudio.com/contact" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://sawabuild.studio/contact" />
+    <meta name="twitter:url" content="https://sawabuildstudio.com/contact" />
     <meta name="twitter:title" content="Contact — Build Your Website Lebanon | SawaBuild Studio" />
     <meta name="twitter:description" content="Contact us to build your website in Lebanon. Free discovery call." />
-    <meta name="twitter:image" content="https://sawabuild.studio/og-image.jpg" />
+    <meta name="twitter:image" content="https://sawabuildstudio.com/og-image.jpg" />
     
     <!-- Fonts - Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,6 +67,70 @@
         style.textContent = `body{background-color:${bgColor};color:${textColor};}`;
         document.head.appendChild(style);
       })();
+    </script>
+    
+    <!-- Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does it cost to build a website in Lebanon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our website packages start at $300 for a starter website. Business websites are $800, and premium custom solutions start at $1200+. All pricing is fixed with clear timelines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Timeline depends on the package: Starter websites take 1-2 weeks, Business websites take 2-3 weeks, and Premium solutions take 3-6 weeks. We provide fixed timelines upfront."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve businesses in Lebanon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we specialize in serving businesses and startups in Lebanon, particularly in Beirut. We also work with international clients."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What languages do you support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We support both English and Arabic. Our team is bilingual and can build websites in either language or both."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sawabuildstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://sawabuildstudio.com/contact"
+        }
+      ]
+    }
     </script>
   </head>
   <body>

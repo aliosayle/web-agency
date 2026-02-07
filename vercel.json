@@ -5,9 +5,9 @@
     {
       "source": "/:path*",
       "has": [
-        { "type": "host", "value": "www.sawabuild.studio" }
+        { "type": "host", "value": "www.sawabuildstudio.com" }
       ],
-      "destination": "https://sawabuild.studio/:path*",
+      "destination": "https://sawabuildstudio.com/:path*",
       "permanent": true
     },
     { "source": "/index.html", "destination": "/", "permanent": true },

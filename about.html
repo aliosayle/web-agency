@@ -14,7 +14,7 @@
     <meta http-equiv="content-language" content="en" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://sawabuild.studio/about" />
+    <link rel="canonical" href="https://sawabuildstudio.com/about" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -26,17 +26,28 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sawabuild.studio/about" />
+    <meta property="og:url" content="https://sawabuildstudio.com/about" />
     <meta property="og:title" content="About Us | Web Design Studio in Lebanon — SawaBuild Studio" />
     <meta property="og:description" content="Web design studio in Lebanon. We build websites that convert. Direct access, fast decisions, full ownership." />
-    <meta property="og:image" content="https://sawabuild.studio/og-image.jpg" />
+    <meta property="og:image" content="https://sawabuildstudio.com/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="ar_LB" />
+    
+    <!-- Geo-targeting for Lebanon -->
+    <meta name="geo.region" content="LB" />
+    <meta name="geo.placename" content="Lebanon" />
+    
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="en-LB" href="https://sawabuildstudio.com/about" />
+    <link rel="alternate" hreflang="ar-LB" href="https://sawabuildstudio.com/about" />
+    <link rel="alternate" hreflang="x-default" href="https://sawabuildstudio.com/about" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://sawabuild.studio/about" />
+    <meta name="twitter:url" content="https://sawabuildstudio.com/about" />
     <meta name="twitter:title" content="About Us | Web Design Studio in Lebanon — SawaBuild Studio" />
     <meta name="twitter:description" content="Web design studio in Lebanon. We build websites that convert. Direct access, fast decisions." />
-    <meta name="twitter:image" content="https://sawabuild.studio/og-image.jpg" />
+    <meta name="twitter:image" content="https://sawabuildstudio.com/og-image.jpg" />
     
     <!-- Fonts - Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,6 +67,28 @@
         style.textContent = `body{background-color:${bgColor};color:${textColor};}`;
         document.head.appendChild(style);
       })();
+    </script>
+    
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sawabuildstudio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://sawabuildstudio.com/about"
+        }
+      ]
+    }
     </script>
   </head>
   <body>
