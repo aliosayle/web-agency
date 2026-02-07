@@ -5,9 +5,18 @@ import './Navbar.css';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState('');
+  const [isDark, setIsDark] = useState(false);
   
   useEffect(() => {
     setCurrentPath(window.location.pathname);
+  }, []);
+  
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mq.matches);
+    const handler = () => setIsDark(mq.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
   }, []);
   
   const navLinks = [
@@ -29,7 +38,7 @@ export default function Navbar() {
       <nav className="navbar-container container">
         <a href="/" className="navbar-logo">
           <img 
-            src="/whiteSBArtboard%201@2x.png" 
+            src={isDark ? '/whiteSBArtboard%201@2x.png' : '/light_mode_logo.png'} 
             alt="SawaBuild Studio" 
             className="logo-image"
           />

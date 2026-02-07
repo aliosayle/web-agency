@@ -1,8 +1,18 @@
+import { useState, useEffect } from 'react';
 import './Footer.css';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mq.matches);
+    const handler = () => setIsDark(mq.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
   return (
     <footer className="footer">
       <div className="container">
@@ -10,7 +20,7 @@ export default function Footer() {
           <div className="footer-brand">
             <a href="/" className="footer-logo">
               <img 
-                src="/whiteSBArtboard%201@2x.png" 
+                src={isDark ? '/whiteSBArtboard%201@2x.png' : '/light_mode_logo.png'} 
                 alt="SawaBuild Studio" 
                 className="footer-logo-image"
               />
