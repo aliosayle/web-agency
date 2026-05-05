@@ -316,7 +316,7 @@ export default function Contact() {
               <p>
                 Follow us on{' '}
                 <a
-                  href="https://www.instagram.com/sawabuildstudio?igsh=aTIwYzRpdGp3NmU0"
+                  href="https://www.instagram.com/sawabuildstudio/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

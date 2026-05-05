@@ -58,7 +58,7 @@ export default function Footer() {
               <li><a href="mailto:support@sawabuildstudio.com">support@sawabuildstudio.com</a></li>
               <li>
                 <a
-                  href="https://www.instagram.com/sawabuildstudio?igsh=aTIwYzRpdGp3NmU0"
+                  href="https://www.instagram.com/sawabuildstudio/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
