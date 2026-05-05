@@ -1,6 +1,5 @@
 /* global process */
-
-const RESEND_API = 'https://api.resend.com/emails';
+import { Resend } from 'resend';
 
 function escapeHtml(s) {
   return s
@@ -12,10 +11,16 @@ function escapeHtml(s) {
 
 /**
  * POST JSON: { name, email, message, company?, budget?, timeline? }
- * Env (Vercel → Project → Settings → Environment Variables):
+ *
+ * Env (Vercel):
  *   RESEND_API_KEY — required
- *   CONTACT_TO_EMAIL — recipient (default: support@sawabuildstudio.com)
- *   CONTACT_FROM_EMAIL — must be allowed by Resend (verify your domain; test with delivered@resend.dev)
+ *   CONTACT_TO_EMAIL — where form submissions are delivered
+ *   CONTACT_FROM_EMAIL — optional; defaults to onboarding@resend.dev
+ *
+ * Important: with `from: onboarding@resend.dev`, Resend only delivers to
+ * allowed recipients (often your account / test addresses). To use
+ * CONTACT_TO_EMAIL like support@s..., verify sawabuildstudio.com in Resend
+ * and set CONTACT_FROM_EMAIL to an address on that domain.
  */
 export default {
   async fetch(request) {
@@ -53,10 +58,9 @@ export default {
       return Response.json({ error: 'Please enter a valid email address.' }, { status: 400 });
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
-    const to = process.env.CONTACT_TO_EMAIL || 'support@sawabuildstudio.com';
-    const from =
-      process.env.CONTACT_FROM_EMAIL?.trim() || 'SawaBuild Studio <onboarding@resend.dev>';
+    const apiKey = process.env.RESEND_API_KEY?.trim();
+    const to = process.env.CONTACT_TO_EMAIL?.trim() || 'support@sawabuildstudio.com';
+    const from = process.env.CONTACT_FROM_EMAIL?.trim() || 'onboarding@resend.dev';
 
     if (!apiKey) {
       console.error('[contact] RESEND_API_KEY is not set');
@@ -78,25 +82,20 @@ export default {
 
     const html = `<pre style="font-family:system-ui,sans-serif;white-space:pre-wrap;line-height:1.5">${escapeHtml(text)}</pre>`;
 
-    let outbound;
+    const resend = new Resend(apiKey);
+
+    let sendResult;
     try {
-      outbound = await fetch(RESEND_API, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from,
-          to: [to],
-          reply_to: email,
-          subject: `[Contact] Message from ${name}`,
-          text,
-          html,
-        }),
+      sendResult = await resend.emails.send({
+        from,
+        to,
+        replyTo: email,
+        subject: `[Contact] Message from ${name}`,
+        text,
+        html,
       });
     } catch (err) {
-      console.error('[contact] Fetch to Resend failed', err);
+      console.error('[contact] Resend send threw', err);
       return Response.json(
         {
           error:
@@ -106,34 +105,31 @@ export default {
       );
     }
 
-    if (!outbound.ok) {
-      const errBody = await outbound.text().catch(() => '');
-      console.error('[contact] Resend error', outbound.status, errBody.slice(0, 800));
+    const { error } = sendResult;
+    if (error) {
+      const raw =
+        typeof error.message === 'string'
+          ? error.message
+          : JSON.stringify(error).slice(0, 400);
+      console.error('[contact] Resend error', raw);
 
-      let resendHint = '';
-      try {
-        const parsed = JSON.parse(errBody);
-        if (typeof parsed.message === 'string') {
-          resendHint = parsed.message;
-        }
-      } catch {
-        /* ignore */
-      }
-
-      const lower = resendHint.toLowerCase();
+      const lower = raw.toLowerCase();
       let userError =
         'Could not send your message. Please try again or email us directly.';
+
+      const usingResendOnboarding = from.includes('onboarding@resend.dev');
 
       if (
         lower.includes('domain') ||
         lower.includes('verify') ||
         lower.includes('not allowed') ||
-        outbound.status === 403
+        (lower.includes('invalid') && lower.includes('to'))
       ) {
-        userError =
-          'Email is not fully set up yet. In Resend, verify your domain and set CONTACT_FROM_EMAIL and CONTACT_TO_EMAIL in Vercel. For a quick test, set CONTACT_TO_EMAIL to delivered@resend.dev.';
-      } else if (outbound.status === 422 && resendHint) {
-        userError = `Message could not be sent: ${resendHint}`;
+        userError = usingResendOnboarding
+          ? 'Resend blocked this send. With onboarding@resend.dev you can usually only mail your own or test addresses—set CONTACT_TO_EMAIL in Vercel to the Gmail that worked in your test (or delivered@resend.dev). To receive at support@sawabuildstudio.com, verify sawabuildstudio.com in Resend and set CONTACT_FROM_EMAIL to an address on that domain.'
+          : 'Could not deliver to this address. Check CONTACT_TO_EMAIL and that your sending domain is verified in Resend.';
+      } else if (raw.length < 400) {
+        userError = `Message could not be sent: ${raw}`;
       }
 
       return Response.json({ error: userError }, { status: 502 });
