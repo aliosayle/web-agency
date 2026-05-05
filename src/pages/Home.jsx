@@ -19,7 +19,7 @@ export default function Home() {
             </p>
             <div className="hero-ctas">
               <Button to="/contact" variant="primary" size="lg">
-                Book a Call
+                Book a free call
               </Button>
               <Button to="/work" variant="outline" size="lg">
                 View Work

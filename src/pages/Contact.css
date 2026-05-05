@@ -208,6 +208,24 @@
 }
 
 /* Success Message */
+.form-submit-error {
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  border-radius: 8px;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-submit-error {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.3);
+  }
+}
+
 .success-message {
   text-align: center;
   padding: var(--space-12) var(--space-8);
@@ -271,6 +289,10 @@
 .direct-info p,
 .timezone-info p {
   line-height: 1.7;
+}
+
+.direct-info p + p {
+  margin-top: var(--space-3);
 }
 
 .direct-info a {

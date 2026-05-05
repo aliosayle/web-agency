@@ -14,17 +14,39 @@ export default function Contact() {
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In production, this would send to a backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    setSubmitError('');
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        setSubmitError(
+          typeof data.error === 'string' ? data.error : 'Something went wrong. Please try again.'
+        );
+        return;
+      }
+      setIsSubmitted(true);
+    } catch {
+      setSubmitError(
+        'Could not reach the server. If you are testing locally, run `vercel dev` so /api/contact is available—or email us directly.'
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -82,7 +104,7 @@ export default function Contact() {
                   <span>Powered by Calendly</span>
                 </div>
                 <Button 
-                  href="https://calendly.com" 
+                  href="https://calendly.com/sawabuildstudio-support/30min" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   variant="primary" 
@@ -120,6 +142,11 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="contact-form">
+                  {submitError ? (
+                    <p className="form-submit-error" role="alert">
+                      {submitError}
+                    </p>
+                  ) : null}
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="name">Your name *</label>
@@ -208,8 +235,14 @@ export default function Contact() {
                     />
                   </div>
                   
-                  <Button type="submit" variant="secondary" size="lg" fullWidth>
-                    Send Message
+                  <Button
+                    type="submit"
+                    variant="secondary"
+                    size="lg"
+                    fullWidth
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Sending…' : 'Send Message'}
                   </Button>
                 </form>
               )}
@@ -279,6 +312,17 @@ export default function Contact() {
               <p>
                 Reach us directly at <a href="mailto:support@sawabuildstudio.com">support@sawabuildstudio.com</a>. 
                 We read every email personally.
+              </p>
+              <p>
+                Follow us on{' '}
+                <a
+                  href="https://www.instagram.com/sawabuildstudio?igsh=aTIwYzRpdGp3NmU0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+                .
               </p>
             </div>
             

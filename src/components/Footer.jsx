@@ -56,6 +56,15 @@ export default function Footer() {
             <ul className="footer-links">
               <li><a href="/contact">Book a Call</a></li>
               <li><a href="mailto:support@sawabuildstudio.com">support@sawabuildstudio.com</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/sawabuildstudio?igsh=aTIwYzRpdGp3NmU0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
             </ul>
           </div>
         </div>

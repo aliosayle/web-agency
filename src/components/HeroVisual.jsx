@@ -55,7 +55,7 @@ const cardFloatTransition = {
 // Sophisticated component animations with diverse styles
 const componentConfigs = {
   header: {
-    delay: 0,
+    delay: 0.15,
     duration: 0.45,
     initial: { x: -120, y: -30, opacity: 0, rotate: -12, scale: 0.6 },
     animate: { 
@@ -94,7 +94,7 @@ const componentConfigs = {
     ease: [0.34, 1.56, 0.64, 1], // Elastic
   },
   heroSubtitle: {
-    delay: 0.35,
+    delay: 0.15,
     duration: 0.4,
     initial: { 
       x: -100, 
@@ -113,7 +113,7 @@ const componentConfigs = {
     ease: [0.25, 0.46, 0.45, 0.94], // Ease out quad
   },
   heroButton: {
-    delay: 0.55,
+    delay: 0.15,
     duration: 0.4,
     initial: { 
       x: 140, 
@@ -132,7 +132,7 @@ const componentConfigs = {
     ease: [0.68, -0.6, 0.32, 1.6], // Strong back
   },
   contentLine1: {
-    delay: 0.75,
+    delay: 0.15,
     duration: 0.35,
     initial: { 
       opacity: 0, 
@@ -147,7 +147,7 @@ const componentConfigs = {
     ease: [0.22, 1, 0.36, 1], // Ease out cubic
   },
   contentLine2: {
-    delay: 0.88,
+    delay: 0.15,
     duration: 0.35,
     initial: { 
       opacity: 0, 
@@ -162,7 +162,7 @@ const componentConfigs = {
     ease: [0.22, 1, 0.36, 1],
   },
   contentLine3: {
-    delay: 1.0,
+    delay: 0.15,
     duration: 0.35,
     initial: { 
       opacity: 0, 
@@ -177,7 +177,7 @@ const componentConfigs = {
     ease: [0.22, 1, 0.36, 1],
   },
   card1: {
-    delay: 1.2,
+    delay: 0.15,
     duration: 0.5,
     initial: { 
       x: -200, 
@@ -198,7 +198,7 @@ const componentConfigs = {
     ease: [0.34, 1.56, 0.64, 1], // Elastic
   },
   card2: {
-    delay: 1.35,
+    delay: 0.15,
     duration: 0.5,
     initial: { 
       x: 0, 
@@ -219,7 +219,7 @@ const componentConfigs = {
     ease: [0.68, -0.6, 0.32, 1.6], // Back
   },
   card3: {
-    delay: 1.5,
+    delay: 0.15,
     duration: 0.5,
     initial: { 
       x: 200, 
