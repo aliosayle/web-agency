@@ -1,31 +1,76 @@
+import { motion, useReducedMotion } from 'framer-motion';
 import Button from '../components/Button';
 import HeroVisual from '../components/HeroVisual';
 import SectionHeader from '../components/SectionHeader';
 import './Home.css';
 
+const heroFlipEase = [0.22, 1, 0.36, 1];
+
 export default function Home() {
+  const reduceMotion = useReducedMotion() === true;
+
+  const viewport = { once: true, margin: '-48px', amount: 0.35 };
+  const baseTransition = reduceMotion
+    ? { duration: 0 }
+    : { duration: 0.7, ease: heroFlipEase };
+  const hidden = reduceMotion
+    ? { opacity: 1, rotateX: 0, y: 0, filter: 'blur(0px)' }
+    : { opacity: 0, rotateX: 22, y: 42, filter: 'blur(6px)' };
+  const visible = { opacity: 1, rotateX: 0, y: 0, filter: 'blur(0px)' };
+  const perspectiveStyle = reduceMotion ? undefined : { transformPerspective: 1200 };
+
   return (
     <main className="home">
       {/* Hero Section */}
       <section className="hero section">
         <div className="container hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">
+            <motion.h1
+              className="hero-title"
+              style={{ transformOrigin: '50% 110%', ...perspectiveStyle }}
+              initial={hidden}
+              whileInView={visible}
+              viewport={viewport}
+              transition={{ ...baseTransition, delay: reduceMotion ? 0 : 0.04 }}
+            >
               Websites that turn visitors into paying customers
-            </h1>
-            <p className="hero-subtitle">
+            </motion.h1>
+            <motion.p
+              className="hero-subtitle"
+              style={{ transformOrigin: '50% 110%', ...perspectiveStyle }}
+              initial={hidden}
+              whileInView={visible}
+              viewport={viewport}
+              transition={{ ...baseTransition, delay: reduceMotion ? 0 : 0.14 }}
+            >
               We design and build conversion-focused websites for businesses in <strong>Lebanon</strong> and beyond. 
               No fluff. No delays. Just results.
-            </p>
-            <div className="hero-ctas">
+            </motion.p>
+            <motion.div
+              className="hero-ctas"
+              style={{ transformOrigin: '50% 110%', ...perspectiveStyle }}
+              initial={hidden}
+              whileInView={visible}
+              viewport={viewport}
+              transition={{ ...baseTransition, delay: reduceMotion ? 0 : 0.24 }}
+            >
               <Button to="/contact" variant="primary" size="lg">
                 Book a free call
               </Button>
               <Button to="/work" variant="outline" size="lg">
                 View Work
               </Button>
-            </div>
-            <p className="hero-note">Free 30-minute consultation. No strings attached.</p>
+            </motion.div>
+            <motion.p
+              className="hero-note"
+              style={{ transformOrigin: '50% 110%', ...perspectiveStyle }}
+              initial={hidden}
+              whileInView={visible}
+              viewport={viewport}
+              transition={{ ...baseTransition, delay: reduceMotion ? 0 : 0.34 }}
+            >
+              Free 30-minute consultation. No strings attached.
+            </motion.p>
           </div>
           <HeroVisual />
         </div>

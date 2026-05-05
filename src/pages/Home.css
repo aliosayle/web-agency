@@ -24,6 +24,7 @@
 
 .hero-content {
   max-width: 720px;
+  transform-style: preserve-3d;
 }
 
 .hero-title {
